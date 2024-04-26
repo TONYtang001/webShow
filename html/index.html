@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人员管理系统</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* border: 100px 10% aliceblue; */
+        }
+
+        .left-container {
+            /* background-image: url('../img/home.jpg'); */
+            width: 40%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .left-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            /* background-color: rgba(126, 206, 226, 0.5);  */
+            background-image: linear-gradient(to bottom, rgba(165, 218, 239, 0) 0%, rgba(165, 218, 239, 0.5) 100%); /* 更改背景颜色为渐变 */
+            z-index: -1; /* 保证伪元素位于内容之下 */
+            border-radius: 10%;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+            background-color: #fff1c5;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn:hover {
+            background-color: #85fba4;
+        }
+
+        .right-container {
+            width: 60%;
+            background-image: url('../img/home.jpg');
+            background-position: center center;
+            /* 背景图不平铺 */
+            background-repeat: no-repeat;
+            /* 让背景图基于容器大小伸缩 */
+            background-size: cover;
+            /* 设置背景颜色，背景图加载过程中会显示背景色 */
+            background-color: #464646;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-container">
+        <h1>人员管理系统</h1>
+        <button class="btn login">登录</button>
+        <button class="btn register">注册</button>
+    </div>
+    <div class="right-container"></div>
+    
+</body>
+
+<script src="../js/home.js"></script>
+</html>
