@@ -18,7 +18,14 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    /* 添加渐变背景 */
+    background-image: linear-gradient(
+        to right,
+        #fecea8, /* 基础颜色 */
+        #fed976 30%, /* 类似颜色，稍微偏黄 */
+        #fdd09e 60%, /* 同样是暖色调，略带粉 */
+        #fadbcd 90% /* 略微偏冷的浅黄色调，增加对比 */
+    );
     color: white;
     padding: 15px;
     text-align: center;
@@ -41,15 +48,34 @@ main {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    /* 添加背景图片 */
+    background-image: url('../img/main.png'); /* 请替换为你的图片路径 */
+    /* 设置背景图片尺寸 */
+    background-size: cover; /* 或其他如contain等，根据需要调整 */
+    /* 设置背景图片位置 */
+    background-position: center center; /* 图片居中，可按需调整 */
+    /* 保证内容在图片之上 */
+    position: relative;
+    /* 添加一个伪元素作为半透明覆盖层 */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.7); /* 半透明白色，最后一个参数是透明度，范围0-1 */
+    }
 }
 
 .card {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    width: 30%;
+    width: 55%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transform: translateX(10%); /* 将卡片向右平移自身宽度的10%，可根据需要调整数值 */
 }
 
 h2 {
