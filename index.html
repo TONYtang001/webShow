@@ -78,6 +78,26 @@
             height: 100%;
             overflow: hidden;
         }
+
+        @keyframes gradientSmoothChange {
+            0%, 25% {background: linear-gradient(90deg, #fecea8, #fecea8 40%);} /* 红色到橙色作为过渡 */
+            26%, 50% {background: linear-gradient(90deg,  rgba(255, 192, 203, 1) 60%, rgba(173, 129, 255, 1) 80%);} /* 橙色到黄色 */
+            51%, 75% {background: linear-gradient(90deg, #fecea8, #fecea8 40%);} /* 黄色到绿色 */
+            76%, 100% {background: linear-gradient(90deg, rgba(255, 192, 203, 1) 60%, rgba(173, 129, 255, 1) 80%);} /* 绿色到青色，避免直接跳到蓝色 */
+        }
+
+        body {
+            background: linear-gradient(
+                180deg, /* 渐变方向，180度代表从下往上 */
+                #fecea8, /* 起始颜色 */
+                #fecea8 40%, /* 第一个颜色停止点 */
+                rgba(255, 192, 203, 1) 60%, /* 浅粉色，约在中间过渡 */
+                rgba(173, 129, 255, 1) 80%, /* 淡紫色 */
+                #fecea8 /* 结束颜色，确保平滑循环 */
+            );
+            background-size: 200% 200%;
+            animation: gradientSmoothChange 20s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>

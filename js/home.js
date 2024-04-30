@@ -15,7 +15,15 @@ document.querySelector('.register').addEventListener('click', ()=>{
 
 })
 
-setInterval(function() {  
-    document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);  
-  }, 2000);
+// setInterval(function() {  
+//     document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);  
+//   }, 2000);
   
+
+// document.body.addEventListener('click', function() {
+//     this.style.animationPlayState = 'paused'; // 点击暂停动画
+// });
+
+// document.body.addEventListener('dblclick', function() {
+//     this.style.animationPlayState = 'running'; // 双击恢复动画
+// });
