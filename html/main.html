@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工考勤管理系统 - 主页</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1>员工考勤管理系统</h1>
+        <nav>
+            <a href="../index.html">首页</a>
+            <a href="attendance.html">查看考勤</a>
+            <a href="punch.html" class="active">打卡</a>
+            <a href="leave.html">请假申请</a>
+            <a href="profile.html">个人资料</a>
+            <a href="notifications.html">通知管理</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="card">
+                <h2>今日考勤状态</h2>
+                <button id="attendanceButton" class="btn-primary">一键打卡</button>
+                <p id="attendanceStatus">未打卡</p>
+            </div>
+            <div class="card">
+                <h2>本月出勤天数</h2>
+                <p id="attendanceDays">20天</p>
+            </div>
+            <div class="card">
+                <h2>未处理请假申请</h2>
+                <p id="pendingLeaves">3条</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
