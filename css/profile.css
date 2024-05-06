@@ -1,0 +1,35 @@
+/* 全局背景渐变 */
+body {
+    background: linear-gradient(
+        180deg, 
+        #fecea8, 
+        #fecea8 40%, 
+        rgba(255, 192, 203, 1) 60%, 
+        rgba(173, 129, 255, 1) 80%, 
+        #fecea8
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* 个人资料卡片样式 */
+.profile-card {
+    max-width: 800px;
+    margin: 10vh auto; /* vh单位用于垂直居中，考虑到fixed header的高度 */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
