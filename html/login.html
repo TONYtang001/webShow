@@ -121,17 +121,20 @@
             <div class="header">
                 login
             </div>
-            <div class="input-wrapper">
-                <div class="border-wrapper">
-                    <input type="text" name="username" placeholder="username" class="border-item username" id="username" autocomplete="off">
+            <form id="loginForm"> <!-- 添加了form标签并分配ID -->
+                <div class="input-wrapper">
+                    <div class="border-wrapper">
+                        <input type="text" name="username" placeholder="username" class="border-item username" id="username" autocomplete="off">
+                    </div>
+                    <div class="border-wrapper">
+                        <input type="password" name="password" placeholder="password" class="border-item password" id="password" autocomplete="off">
+                    </div>
                 </div>
-                <div class="border-wrapper">
-                    <input type="password" name="password" placeholder="password" class="border-item password" id="password" autocomplete="off">
+                <div class="action">
+                    <div class="btn">login</div>
                 </div>
-            </div>
-            <div class="action">
-                <div class="btn">login</div>
-            </div>
+            </form>
+
             <div class="icon-wrapper">
                 <i class="iconfont icon-weixin"></i>
                 <i class="iconfont icon-qq"></i>
@@ -140,6 +143,9 @@
         </div>
     </body>
     
+
+    <!-- 引入axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/login.js"></script>
     <script>
         // console.log(location.href);

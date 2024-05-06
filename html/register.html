@@ -121,21 +121,26 @@
             <div class="header">
                 register
             </div>
-            <div class="input-wrapper">
-                <div class="border-wrapper">
-                    <input type="text" name="username" placeholder="username" class="border-item" autocomplete="off">
+            <form id="registerForm"> <!-- 添加了form标签并分配ID -->
+                <div class="input-wrapper">
+                    <div class="border-wrapper">
+                        <input type="text" name="username" placeholder="username" class="border-item" autocomplete="off">
+                    </div>
+                    <div class="border-wrapper">
+                        <input type="password" name="password" placeholder="password" class="border-item" autocomplete="off">
+                    </div>
+                    <div class="border-wrapper">
+                        <input type="password" name="confirmpassword" placeholder="confirm password" class="border-item" autocomplete="off"> <!-- 修改了name属性 -->
+                    </div>
                 </div>
-                <div class="border-wrapper">
-                    <input type="password" name="password" placeholder="password" class="border-item" autocomplete="off">
+    
+                <div class="action">
+                    <div class="btn">register</div>
                 </div>
-                <div class="border-wrapper">
-                    <input type="password" name="password" placeholder="confirm password" class="border-item" autocomplete="off">
-                </div>
-            </div>
+            </form> 
 
-            <div class="action">
-                <div class="btn">register</div>
-            </div>
+
+
             <div class="icon-wrapper">
                 <i class="iconfont icon-weixin"></i>
                 <i class="iconfont icon-qq"></i>
@@ -143,6 +148,7 @@
             </div>
         </div>
     </body>
-    
+    <!-- 引入axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/register.js"></script>
 </html>
