@@ -1,0 +1,61 @@
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 输入框及按钮样式 */
+.search-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 1380px;
+}
+
+#employeeName {
+    flex-grow: 0; /* 取消自动扩展 */
+    width: 200px; /* 设置固定宽度 */
+    padding: 10px;
+    font-size: 16px;
+    border: 5px solid #1f7089;
+    border-radius: 5px;
+}
+
+#searchBtn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #238774;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* 添加左侧间距以分隔输入框和按钮 */
+}
+
+/* 表格样式 */
+.attendance-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#attendanceTable th,
+#attendanceTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#attendanceTable th {
+    background-color: #15b7b9;
+    font-weight: bold;
+}
+
+/* 新增内容行的样式 */
+#attendanceTable tbody tr td {
+    color: #666; /* 将内容字体颜色调淡 */
+    font-weight: normal; /* 可选，取消加粗效果，让内容看起来更轻 */
+}
